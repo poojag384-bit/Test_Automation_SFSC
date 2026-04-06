@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhatsApp Simulator</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --wa-green:#00a884;--wa-dark-green:#008069;--wa-light-green:#d9fdd3;
+  --wa-bg:#efeae2;--wa-panel:#fff;--wa-sidebar-bg:#fff;
+  --wa-header:#f0f2f5;--wa-border:#e9edef;--wa-text:#111b21;
+  --wa-text-secondary:#667781;--wa-chat-bg:#efeae2;
+  --wa-bubble-out:#d9fdd3;--wa-bubble-in:#fff;
+  --wa-input-bg:#fff;--wa-search-bg:#f0f2f5;
+}
+body{font-family:'Segoe UI',Helvetica,Arial,sans-serif;background:#d1d7db;height:100vh;display:flex;align-items:center;justify-content:center;color:var(--wa-text)}
+.app{width:100%;max-width:1400px;height:100vh;max-height:100vh;display:flex;box-shadow:0 1px 6px rgba(0,0,0,.15);overflow:hidden}
+.sidebar{width:340px;min-width:340px;background:var(--wa-sidebar-bg);display:flex;flex-direction:column;border-right:1px solid var(--wa-border)}
+.sidebar-header{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;background:var(--wa-header);height:60px}
+.sidebar-header .avatar{width:40px;height:40px;border-radius:50%;background:var(--wa-dark-green);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;font-size:16px}
+.sidebar-header .actions{display:flex;gap:10px}
+.sidebar-header .actions button{background:none;border:none;cursor:pointer;padding:8px;border-radius:50%;color:var(--wa-text-secondary);font-size:20px}
+.sidebar-header .actions button:hover{background:var(--wa-search-bg)}
+.search-box{padding:8px 12px;background:var(--wa-header)}
+.search-box input{width:100%;padding:8px 32px 8px 40px;border:none;border-radius:8px;background:var(--wa-search-bg);font-size:14px;outline:none;color:var(--wa-text)}
+.search-box .search-wrap{position:relative}
+.search-box .search-wrap::before{content:"🔍";position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:14px}
+.contact-list{flex:1;overflow-y:auto}
+.contact-list::-webkit-scrollbar{width:6px}
+.contact-list::-webkit-scrollbar-thumb{background:#ccc;border-radius:3px}
+.contact-item{display:flex;align-items:center;padding:12px 16px;cursor:pointer;border-bottom:1px solid var(--wa-border);transition:background .15s}
+.contact-item:hover{background:var(--wa-search-bg)}
+.contact-item.active{background:#f0f2f5}
+.contact-avatar{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;font-size:18px;flex-shrink:0;margin-right:14px}
+.contact-info{flex:1;min-width:0}
+.contact-name{font-size:16px;font-weight:400;color:var(--wa-text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.contact-last-msg{font-size:13px;color:var(--wa-text-secondary);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:2px}
+.contact-meta{display:flex;flex-direction:column;align-items:flex-end;gap:4px;margin-left:8px}
+.contact-time{font-size:12px;color:var(--wa-text-secondary)}
+.unread-badge{background:var(--wa-green);color:#fff;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600}
+.chat-area{flex:1;display:flex;flex-direction:column;background:var(--wa-chat-bg);position:relative}
+.chat-area::before{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='400' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='p' width='40' height='40' patternUnits='userSpaceOnUse'%3E%3Cpath d='M20 2c1 0 2 1 2 2s-1 2-2 2-2-1-2-2 1-2 2-2z' fill='%23ccc' opacity='.15'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='400' height='400' fill='url(%23p)'/%3E%3C/svg%3E") repeat;opacity:.4;pointer-events:none;z-index:0}
+.chat-header{display:flex;align-items:center;padding:10px 16px;background:var(--wa-header);height:60px;z-index:1;border-bottom:1px solid var(--wa-border)}
+.chat-header .avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;font-size:16px;margin-right:14px;flex-shrink:0}
+.chat-header-info{flex:1}
+.chat-header-info .name{font-size:16px;font-weight:500}
+.chat-header-info .status{font-size:13px;color:var(--wa-text-secondary)}
+.chat-header .actions{display:flex;gap:6px}
+.chat-header .actions button{background:none;border:none;cursor:pointer;padding:8px;border-radius:50%;color:var(--wa-text-secondary);font-size:18px}
+.chat-header .actions button:hover{background:rgba(0,0,0,.05)}
+.messages{flex:1;overflow-y:auto;padding:20px 60px;display:flex;flex-direction:column;z-index:1}
+.messages::-webkit-scrollbar{width:6px}
+.messages::-webkit-scrollbar-thumb{background:rgba(0,0,0,.2);border-radius:3px}
+.msg{max-width:65%;padding:6px 8px 4px;margin-bottom:4px;border-radius:8px;position:relative;word-wrap:break-word;line-height:1.4;font-size:14.2px;box-shadow:0 1px .5px rgba(0,0,0,.13)}
+.msg-out{background:var(--wa-bubble-out);align-self:flex-end;border-top-right-radius:0}
+.msg-in{background:var(--wa-bubble-in);align-self:flex-start;border-top-left-radius:0}
+.msg-text{padding-right:58px;white-space:pre-wrap}
+.msg-meta{float:right;display:flex;align-items:center;gap:3px;margin-top:2px;margin-left:8px}
+.msg-time{font-size:11px;color:var(--wa-text-secondary)}
+.msg-status{font-size:15px;color:var(--wa-text-secondary)}
+.msg-status.read{color:#53bdeb}
+.date-separator{align-self:center;background:#fff;padding:5px 12px;border-radius:8px;font-size:12.5px;color:var(--wa-text-secondary);margin:12px 0;box-shadow:0 1px .5px rgba(0,0,0,.13)}
+.typing-indicator{align-self:flex-start;background:var(--wa-bubble-in);padding:10px 14px;border-radius:8px;border-top-left-radius:0;box-shadow:0 1px .5px rgba(0,0,0,.13);display:none;margin-bottom:4px}
+.typing-indicator.show{display:flex}
+.typing-dots{display:flex;gap:4px}
+.typing-dots span{width:7px;height:7px;background:#999;border-radius:50%;animation:typingDot 1.4s infinite}
+.typing-dots span:nth-child(2){animation-delay:.2s}
+.typing-dots span:nth-child(3){animation-delay:.4s}
+@keyframes typingDot{0%,60%,100%{transform:translateY(0);opacity:.4}30%{transform:translateY(-4px);opacity:1}}
+.input-area{display:flex;align-items:center;padding:8px 12px;background:var(--wa-header);z-index:1;gap:8px}
+.input-area button{background:none;border:none;cursor:pointer;padding:8px;border-radius:50%;color:var(--wa-text-secondary);font-size:22px;flex-shrink:0;transition:color .15s}
+.input-area button:hover{color:var(--wa-text)}
+.input-area button.send-btn{color:var(--wa-text-secondary)}
+.input-area button.send-btn:hover{color:var(--wa-dark-green)}
+.input-wrap{flex:1;position:relative}
+.input-wrap input{width:100%;padding:10px 14px;border:none;border-radius:8px;font-size:15px;outline:none;background:var(--wa-input-bg);color:var(--wa-text)}
+.input-wrap input::placeholder{color:var(--wa-text-secondary)}
+.no-chat{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:1;gap:16px;color:var(--wa-text-secondary)}
+.no-chat .logo{font-size:64px;opacity:.6}
+.no-chat h2{font-weight:300;font-size:28px;color:var(--wa-text)}
+.no-chat p{font-size:14px;text-align:center;max-width:480px;line-height:1.6}
+.notification{position:fixed;top:20px;right:20px;background:#333;color:#fff;padding:12px 20px;border-radius:8px;font-size:14px;z-index:999;transform:translateX(120%);transition:transform .3s ease;box-shadow:0 4px 12px rgba(0,0,0,.25)}
+.notification.show{transform:translateX(0)}
+.sim-panel{padding:12px 16px;background:linear-gradient(135deg,#075e54,#128c7e);border-bottom:1px solid rgba(255,255,255,.1)}
+.sim-panel summary{color:#fff;font-size:13px;cursor:pointer;font-weight:500;padding:4px 0}
+.sim-panel summary:hover{opacity:.9}
+.sim-panel-body{margin-top:10px;display:flex;flex-direction:column;gap:8px}
+.sim-panel-body input,.sim-panel-body textarea,.sim-panel-body select{width:100%;padding:8px 10px;border:none;border-radius:6px;font-size:13px;font-family:inherit;outline:none;background:rgba(255,255,255,.95)}
+.sim-panel-body textarea{resize:vertical;min-height:50px}
+.sim-panel-body button{padding:8px 16px;background:#25d366;color:#fff;border:none;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;transition:background .15s}
+.sim-panel-body button:hover{background:#1da851}
+.sim-panel-body label{color:rgba(255,255,255,.9);font-size:12px;font-weight:500}
+</style>
+</head>
+<body>
+
+<div class="app">
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <div class="avatar">PG</div>
+      <div class="actions">
+        <button title="Status">◉</button>
+        <button title="New chat">✎</button>
+        <button title="Menu">⋮</button>
+      </div>
+    </div>
+    <div class="search-box">
+      <div class="search-wrap">
+        <input type="text" placeholder="Search or start new chat" id="searchInput" oninput="filterContacts()">
+      </div>
+    </div>
+    <div class="sim-panel">
+      <details>
+        <summary>⚡ Simulate Incoming Message</summary>
+        <div class="sim-panel-body">
+          <label>From Contact</label>
+          <select id="simContact"></select>
+          <label>Message</label>
+          <textarea id="simMessage" placeholder="Type incoming message..."></textarea>
+          <button onclick="simulateIncoming()">Receive Message</button>
+        </div>
+      </details>
+    </div>
+    <div class="contact-list" id="contactList"></div>
+  </div>
+
+  <div class="chat-area" id="chatArea">
+    <div class="no-chat" id="noChat">
+      <div class="logo">💬</div>
+      <h2>WhatsApp Simulator</h2>
+      <p>Send and receive messages to test WhatsApp integration scenarios.<br>Select a contact to start chatting.</p>
+    </div>
+
+    <div class="chat-header" id="chatHeader" style="display:none">
+      <div class="avatar" id="chatAvatar"></div>
+      <div class="chat-header-info">
+        <div class="name" id="chatName"></div>
+        <div class="status" id="chatStatus">online</div>
+      </div>
+      <div class="actions">
+        <button title="Search">🔍</button>
+        <button title="Menu">⋮</button>
+      </div>
+    </div>
+
+    <div class="messages" id="messages" style="display:none"></div>
+
+    <div class="input-area" id="inputArea" style="display:none">
+      <button title="Emoji">😊</button>
+      <button title="Attach">📎</button>
+      <div class="input-wrap">
+        <input type="text" id="msgInput" placeholder="Type a message" onkeydown="if(event.key==='Enter')sendMessage()">
+      </div>
+      <button class="send-btn" title="Send" onclick="sendMessage()">➤</button>
+    </div>
+  </div>
+</div>
+
+<div class="notification" id="notification"></div>
+
+<script>
+const contacts = [
+  { id: 'sixt_nl', name: 'SIXT Netherlands', phone: '+31 23 569 8656', avatar: '#075e54', initials: 'SN', lastMsg: '', unread: 0, online: true },
+  { id: 'sixt_de', name: 'SIXT Germany', phone: '+49 89 74444 0', avatar: '#128c7e', initials: 'SD', lastMsg: '', unread: 0, online: true },
+  { id: 'sixt_support', name: 'SIXT Support', phone: '+31 88 002 0200', avatar: '#00a884', initials: 'SS', lastMsg: '', unread: 0, online: true },
+  { id: 'customer1', name: 'Jan de Vries', phone: '+31 6 1234 5678', avatar: '#4a90d9', initials: 'JV', lastMsg: '', unread: 0, online: false },
+  { id: 'customer2', name: 'Emma Mueller', phone: '+49 170 1234567', avatar: '#e74c3c', initials: 'EM', lastMsg: '', unread: 0, online: true },
+  { id: 'customer3', name: 'Sophie Bakker', phone: '+31 6 9876 5432', avatar: '#8e44ad', initials: 'SB', lastMsg: '', unread: 0, online: false },
+  { id: 'customer4', name: 'Pooja G', phone: '+91 98765 43210', avatar: '#f39c12', initials: 'PG', lastMsg: '', unread: 0, online: true },
+];
+
+const chatHistory = {};
+let activeContact = null;
+
+function init() {
+  contacts.forEach(c => { chatHistory[c.id] = []; });
+  
+  addSystemMessage('sixt_nl', 'Welcome to SIXT Netherlands WhatsApp support. How can we help you?');
+  addSystemMessage('sixt_de', 'Willkommen beim SIXT Deutschland WhatsApp-Support.');
+  addSystemMessage('sixt_support', 'Hello! This is SIXT Support. We are here to assist you.');
+  
+  renderContacts();
+  populateSimSelect();
+}
+
+function addSystemMessage(contactId, text) {
+  chatHistory[contactId].push({
+    type: 'in', text, time: formatTime(new Date(Date.now() - 3600000)), status: 'read'
+  });
+  const c = contacts.find(x => x.id === contactId);
+  if (c) c.lastMsg = text;
+}
+
+function formatTime(d) {
+  return d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false });
+}
+
+function renderContacts() {
+  const list = document.getElementById('contactList');
+  const search = document.getElementById('searchInput').value.toLowerCase();
+  
+  list.innerHTML = contacts
+    .filter(c => c.name.toLowerCase().includes(search) || c.phone.includes(search))
+    .map(c => `
+      <div class="contact-item ${activeContact === c.id ? 'active' : ''}" onclick="openChat('${c.id}')">
+        <div class="contact-avatar" style="background:${c.avatar}">${c.initials}</div>
+        <div class="contact-info">
+          <div class="contact-name">${c.name}</div>
+          <div class="contact-last-msg">${c.lastMsg || 'No messages yet'}</div>
+        </div>
+        <div class="contact-meta">
+          <span class="contact-time">${chatHistory[c.id].length ? chatHistory[c.id][chatHistory[c.id].length-1].time : ''}</span>
+          ${c.unread ? `<span class="unread-badge">${c.unread}</span>` : ''}
+        </div>
+      </div>
+    `).join('');
+}
+
+function filterContacts() { renderContacts(); }
+
+function populateSimSelect() {
+  const sel = document.getElementById('simContact');
+  sel.innerHTML = contacts.map(c => `<option value="${c.id}">${c.name}</option>`).join('');
+}
+
+function openChat(contactId) {
+  activeContact = contactId;
+  const c = contacts.find(x => x.id === contactId);
+  c.unread = 0;
+  
+  document.getElementById('noChat').style.display = 'none';
+  document.getElementById('chatHeader').style.display = 'flex';
+  document.getElementById('messages').style.display = 'flex';
+  document.getElementById('inputArea').style.display = 'flex';
+  
+  document.getElementById('chatAvatar').style.background = c.avatar;
+  document.getElementById('chatAvatar').textContent = c.initials;
+  document.getElementById('chatName').textContent = c.name;
+  document.getElementById('chatStatus').textContent = c.online ? 'online' : 'last seen today at ' + formatTime(new Date(Date.now() - 1800000));
+  
+  renderMessages();
+  renderContacts();
+  document.getElementById('msgInput').focus();
+}
+
+function renderMessages() {
+  const container = document.getElementById('messages');
+  const msgs = chatHistory[activeContact] || [];
+  
+  let html = `<div class="date-separator">Today</div>`;
+  msgs.forEach(m => {
+    const statusIcon = m.type === 'out' 
+      ? `<span class="msg-status ${m.status}">${m.status === 'read' ? '✓✓' : m.status === 'delivered' ? '✓✓' : '✓'}</span>` 
+      : '';
+    html += `
+      <div class="msg msg-${m.type}">
+        <span class="msg-text">${escapeHtml(m.text)}</span>
+        <span class="msg-meta">
+          <span class="msg-time">${m.time}</span>
+          ${statusIcon}
+        </span>
+      </div>`;
+  });
+  
+  container.innerHTML = html;
+  container.scrollTop = container.scrollHeight;
+}
+
+function sendMessage() {
+  const input = document.getElementById('msgInput');
+  const text = input.value.trim();
+  if (!text || !activeContact) return;
+  
+  const now = new Date();
+  chatHistory[activeContact].push({
+    type: 'out', text, time: formatTime(now), status: 'sent'
+  });
+  
+  const c = contacts.find(x => x.id === activeContact);
+  c.lastMsg = text;
+  input.value = '';
+  
+  renderMessages();
+  renderContacts();
+  
+  setTimeout(() => {
+    const msg = chatHistory[activeContact].find(m => m.text === text && m.status === 'sent');
+    if (msg) { msg.status = 'delivered'; renderMessages(); }
+  }, 800);
+  
+  setTimeout(() => {
+    const msg = chatHistory[activeContact].find(m => m.text === text && m.status === 'delivered');
+    if (msg) { msg.status = 'read'; renderMessages(); }
+  }, 1500);
+  
+  if (c.id.startsWith('sixt')) {
+    showTyping();
+    setTimeout(() => {
+      hideTyping();
+      const reply = generateAutoReply(text, c.id);
+      chatHistory[activeContact].push({
+        type: 'in', text: reply, time: formatTime(new Date()), status: 'read'
+      });
+      c.lastMsg = reply;
+      renderMessages();
+      renderContacts();
+    }, 2000 + Math.random() * 2000);
+  }
+}
+
+function simulateIncoming() {
+  const contactId = document.getElementById('simContact').value;
+  const text = document.getElementById('simMessage').value.trim();
+  if (!text) return;
+  
+  const c = contacts.find(x => x.id === contactId);
+  const now = new Date();
+  
+  chatHistory[contactId].push({
+    type: 'in', text, time: formatTime(now), status: 'read'
+  });
+  
+  c.lastMsg = text;
+  if (activeContact !== contactId) {
+    c.unread = (c.unread || 0) + 1;
+  }
+  
+  document.getElementById('simMessage').value = '';
+  
+  showNotification(`${c.name}: ${text.substring(0, 50)}${text.length > 50 ? '...' : ''}`);
+  
+  if (activeContact === contactId) {
+    renderMessages();
+  }
+  renderContacts();
+}
+
+function generateAutoReply(text, contactId) {
+  const lower = text.toLowerCase();
+  
+  if (lower.includes('login') || lower.includes('password') || lower.includes('account')) {
+    return "Thank you for reaching out. I understand you're having trouble with your account. Could you please provide your reservation number or email address so we can assist you further?";
+  }
+  if (lower.includes('refund') || lower.includes('money') || lower.includes('payment')) {
+    return "I understand your concern about the refund. Let me check the status for you. Could you please share your reservation ID?";
+  }
+  if (lower.includes('booking') || lower.includes('reservation') || lower.includes('rent')) {
+    return "I'd be happy to help with your reservation. Please share your booking reference number and I'll look into it right away.";
+  }
+  if (lower.includes('hello') || lower.includes('hi') || lower.includes('hey')) {
+    return "Hello! Welcome to SIXT support. How can I assist you today?";
+  }
+  if (lower.includes('thank')) {
+    return "You're welcome! Is there anything else I can help you with?";
+  }
+  if (lower.includes('cancel')) {
+    return "I understand you'd like to cancel. Please note that cancellation policies may apply. Could you share your reservation number?";
+  }
+  
+  return "Thank you for your message. A support agent will review your query and get back to you shortly. Your reference number is #" + Math.floor(10000000 + Math.random() * 90000000) + ".";
+}
+
+function showTyping() {
+  let el = document.querySelector('.typing-indicator');
+  if (!el) {
+    el = document.createElement('div');
+    el.className = 'typing-indicator';
+    el.innerHTML = '<div class="typing-dots"><span></span><span></span><span></span></div>';
+    document.getElementById('messages').appendChild(el);
+  }
+  el.classList.add('show');
+  document.getElementById('chatStatus').textContent = 'typing...';
+  document.getElementById('messages').scrollTop = document.getElementById('messages').scrollHeight;
+}
+
+function hideTyping() {
+  const el = document.querySelector('.typing-indicator');
+  if (el) el.remove();
+  const c = contacts.find(x => x.id === activeContact);
+  if (c) document.getElementById('chatStatus').textContent = c.online ? 'online' : 'last seen today';
+}
+
+function showNotification(text) {
+  const el = document.getElementById('notification');
+  el.textContent = '💬 ' + text;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 3000);
+}
+
+function escapeHtml(t) {
+  const d = document.createElement('div');
+  d.textContent = t;
+  return d.innerHTML;
+}
+
+init();
+</script>
+</body>
+</html>

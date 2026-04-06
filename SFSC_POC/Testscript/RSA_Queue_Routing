@@ -1,0 +1,256 @@
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.prestage@sixt.de"
+Subject : Unsatisfied service during breakdown 
+Email Body : Hi,
+Unsatisfied service during breakdown.
+Thank you.  
+3) Send the email
+4) Login to Salesforce QA Sandbox
+5) Navigate to Case Record detail page
+6) Refresh the page 2 times
+7) Verify that the Case Owner Name field should be "DACH_RSA_After_Claims"
+8) Provide the screenshots of all the execution made above in a single word document and save as "Unsatisfied_DACH_RSA"
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.prestage@sixt.at"
+Subject : Unsatisfied service during breakdown 
+Email Body : Hi,
+Unsatisfied service during breakdown.
+Thank you.  
+3) Send the email
+4) Login to Salesforce QA Sandbox
+5) Navigate to Case Record detail page
+6) Refresh the page 2 times
+7) Verify that the Case Owner Name field should be "DACH_RSA_After_Claims"
+8) Provide the screenshots of all the execution made above in a single word document and save as "Unsatisfied_DACH_RSA_1"
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.prestage@sixt.ch"
+Subject : Unsatisfied service during breakdown 
+Email Body : Hi,
+Unsatisfied service during breakdown.
+Thank you.  
+3) Send the email
+4) Login to Salesforce QA Sandbox
+5) Navigate to Case Record detail page
+6) Refresh the page 2 times
+7) Verify that the Case Owner Name field should be "DACH_RSA_After_Claims"
+8) Provide the screenshots of all the execution made above in a single word document and save as "Unsatisfied_DACH_RSA_2"
+
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.prestage@sixt.co.uk"
+Subject : Unsatisfied service during breakdown 
+Email Body : Hi,
+Unsatisfied service during breakdown.
+Thank you.  
+3) Send the email
+4) Login to Salesforce QA Sandbox
+5) Navigate to Case Record detail page
+6) Refresh the page 2 times
+7) Verify that the Case Owner Name field should be "UK_RSA_After_Claims"
+8) Provide the screenshots of all the execution made above in a single word document and save as "Unsatisfied_RSA_3"
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.prestage@sixt.fr"
+Subject : Unsatisfied service during breakdown 
+Email Body : Hi,
+Unsatisfied service during breakdown.
+Thank you.  
+3) Send the email
+4) Login to Salesforce QA Sandbox
+5) Navigate to Case Record detail page
+6) Refresh the page 2 times
+7) Verify that the Case Owner Name field should be "FR_RSA_After_Claims"
+8) Provide the screenshots of all the execution made above in a single word document and save as "Unsatisfied_RSA_4"
+
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.prestage@sixt.es"
+Subject : Unsatisfied service during breakdown 
+Email Body : Hi,
+Unsatisfied service during breakdown.
+Thank you.  
+3) Send the email
+4) Login to Salesforce QA Sandbox
+5) Navigate to Case Record detail page
+6) Refresh the page 2 times
+7) Verify that the Case Owner Name field should be "ES_RSA_After_Claims"
+8) Provide the screenshots of all the execution made above in a single word document and save as "Unsatisfied_RSA_5"
+
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.prestage@sixt.it"
+Subject : Unsatisfied service during breakdown 
+Email Body : Hi,
+Unsatisfied service during breakdown.
+Thank you.  
+3) Send the email
+4) Login to Salesforce QA Sandbox
+5) Navigate to Case Record detail page
+6) Refresh the page 2 times
+7) Verify that the Case Owner Name field should be "IT_RSA_After_Claims"
+8) Provide the screenshots of all the execution made above in a single word document and save as "Unsatisfied_RSA_6"
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.prestage@sixt.com"
+Subject : Unsatisfied service during breakdown 
+Email Body : Hi,
+Unsatisfied service during breakdown.
+Thank you.  
+3) Send the email
+4) Login to Salesforce QA Sandbox
+5) Navigate to Case Record detail page
+6) Refresh the page 2 times
+7) Verify that the Case Owner Name field should be "US_RSA_After_Claims"
+8) Provide the screenshots of all the execution made above in a single word document and save as "Unsatisfied_DACH_RSA_7"
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.prestage@sixt.be"
+Subject : Unsatisfied service during breakdown 
+Email Body : Hi,
+Unsatisfied service during breakdown.
+Thank you.  
+3) Send the email
+4) Login to Salesforce QA Sandbox
+5) Navigate to Case Record detail page
+6) Refresh the page 2 times
+7) Verify that the Case Owner Name field should be "BNL_RSA_After_Claims"
+8) Provide the screenshots of all the execution made above in a single word document and save as "Unsatisfied_RSA_8"
+
+//Refund of additional costs caused by breakdown
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.prestage@sixt.de"
+Subject : Refund of additional costs caused by breakdown 
+Email Body : Hi,
+Refund of additional costs caused by breakdown.
+Thank you.  
+3) Send the email
+4) Login to Salesforce QA Sandbox
+5) Navigate to Case Record detail page
+6) Refresh the page 2 times
+7) Verify that the Case Owner Name field should be "DACH_RSA_After_Claims"
+8) Provide the screenshots of all the execution made above in a single word document and save as "Refund_RSA_1"
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.prestage@sixt.at"
+Subject : Refund of additional costs caused by breakdown 
+Email Body : Hi,
+Refund of additional costs caused by breakdown.
+Thank you.  
+3) Send the email
+4) Login to Salesforce QA Sandbox
+5) Navigate to Case Record detail page
+6) Refresh the page 2 times
+7) Verify that the Case Owner Name field should be "DACH_RSA_After_Claims"
+8) Provide the screenshots of all the execution made above in a single word document and save as "Refund_RSA_2"
+
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.prestage@sixt.ch"
+Subject : Refund of additional costs caused by breakdown 
+Email Body : Hi,
+Refund of additional costs caused by breakdown.
+Thank you.  
+3) Send the email
+4) Login to Salesforce QA Sandbox
+5) Navigate to Case Record detail page
+6) Refresh the page 2 times
+7) Verify that the Case Owner Name field should be "DACH_RSA_After_Claims"
+8) Provide the screenshots of all the execution made above in a single word document and save as "Refund_RSA_3"
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.prestage@sixt.co.uk"
+Subject : Refund of additional costs caused by breakdown 
+Email Body : Hi,
+Refund of additional costs caused by breakdown.
+Thank you.  
+3) Send the email
+4) Login to Salesforce QA Sandbox
+5) Navigate to Case Record detail page
+6) Refresh the page 2 times
+7) Verify that the Case Owner Name field should be "UK_RSA_After_Claims"
+8) Provide the screenshots of all the execution made above in a single word document and save as "Refund_RSA_4"
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.prestage@sixt.fr"
+Subject : Refund of additional costs caused by breakdown 
+Email Body : Hi,
+Refund of additional costs caused by breakdown.
+Thank you.  
+3) Send the email
+4) Login to Salesforce QA Sandbox
+5) Navigate to Case Record detail page
+6) Refresh the page 2 times
+7) Verify that the Case Owner Name field should be "FR_RSA_After_Claims"
+8) Provide the screenshots of all the execution made above in a single word document and save as "Refund_RSA_5"
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.prestage@sixt.es"
+Subject : Refund of additional costs caused by breakdown 
+Email Body : Hi,
+Refund of additional costs caused by breakdown.
+Thank you.  
+3) Send the email
+4) Login to Salesforce QA Sandbox
+5) Navigate to Case Record detail page
+6) Refresh the page 2 times
+7) Verify that the Case Owner Name field should be "ES_RSA_After_Claims"
+8) Provide the screenshots of all the execution made above in a single word document and save as "Refund_RSA_6"
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.prestage@sixt.it"
+Subject : Refund of additional costs caused by breakdown 
+Email Body : Hi,
+Refund of additional costs caused by breakdown.
+Thank you.  
+3) Send the email
+4) Login to Salesforce QA Sandbox
+5) Navigate to Case Record detail page
+6) Refresh the page 2 times
+7) Verify that the Case Owner Name field should be "IT_RSA_After_Claims"
+8) Provide the screenshots of all the execution made above in a single word document and save as "Refund_RSA_7"
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.prestage@sixt.com"
+Subject : Refund of additional costs caused by breakdown 
+Email Body : Hi,
+Refund of additional costs caused by breakdown.
+Thank you.  
+3) Send the email
+4) Login to Salesforce QA Sandbox
+5) Navigate to Case Record detail page
+6) Refresh the page 2 times
+7) Verify that the Case Owner Name field should be "US_RSA_After_Claims"
+8) Provide the screenshots of all the execution made above in a single word document and save as "Refund_RSA_8"
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.prestage@sixt.be" and "service.prestage@sixt.nl"
+Subject : Refund of additional costs caused by breakdown 
+Email Body : Hi,
+Refund of additional costs caused by breakdown.
+Thank you.  
+3) Send the email
+4) Login to Salesforce QA Sandbox
+5) Navigate to Case Record detail page
+6) Refresh the page 2 times
+7) Verify that the Case Owner Name field should be "BNL_RSA_After_Claims"
+8) Provide the screenshots of all the execution made above in a single word document and save as "Refund_RSA_9"

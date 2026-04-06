@@ -1,0 +1,14 @@
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.cstdev@sixt.nl"
+Subject : Login not working 
+Email Body : Hi,
+I am unable to login to my account. I have tried resetting my password but
+the issue persists. Please help.
+Thank you.  
+3) Send the email
+4) Login to Salesforce
+5) Navigate to Case Record detail page
+6) Refresh the page 2 times
+7) Verify all the field values
+8) Provide the screenshots of all the execution made above in a single word document

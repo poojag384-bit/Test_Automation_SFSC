@@ -1,0 +1,10 @@
+# Ignore everything by default
+*
+
+# Allow the directory structure to Testscript
+!SFSC_POC/
+!SFSC_POC/Testscript/
+!SFSC_POC/Testscript/*
+
+# Allow .gitignore itself
+!.gitignore
