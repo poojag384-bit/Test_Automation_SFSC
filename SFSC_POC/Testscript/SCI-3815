@@ -1,0 +1,12 @@
+Given create an email to case for the address "vip-espana.qafull@sixt.com"
+And write the subject line as "Poor service from the team"
+And write the same in the email body as well 
+And take a screenshot 
+And once the case is created update the Language to Dutch
+And Verify the Case Owner name and take a screenshot
+And in the App Launcher search for "Command Center for Service" and click
+And click on "Skill Backlog"
+And filter out and find the case id and verify the priority number and take the screenshot
+And after 100 seconds check in "Skill Backlog" the Skills and take a screenshot
+
+
