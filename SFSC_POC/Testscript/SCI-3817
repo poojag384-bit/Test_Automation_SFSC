@@ -1,0 +1,168 @@
+
+1) Given create an email to case for the address "service.qafull@sixt.it"
+2) And write the subject line as "Vehicle breakdown"
+3) And write the same in the email body as well 
+4) And take a screenshot 
+5) And click on Change Owner to IT_VIP group and Save
+6) And take a screenshot
+7) And in the App Launcher search for "Command Center for Service" and click
+8) And click on "Skill Backlog"
+9) And filter out and find the case id and verify the priority number should be 51 for High, 55 for Medium and 57 for Low and take the screenshot
+10) And Update the Case Priority to Medium and take the screenshot
+11) And click on "Skill Backlog"
+12) And filter out and find the case id and verify the priority number and take the screenshot
+13) And click on "Skill Backlog"
+14) And filter out and find the case id and verify the priority number should be 51 for High, 55 for Medium and 57 for Low and take the screenshot
+15) Navigate back to the record page and update the Case Priority to High and take the screenshot
+16) And click on "Skill Backlog"
+17) And filter out and find the case id and verify the priority number should be 51 for High, 55 for Medium and 57 for Low and take the screenshot
+
+
+1) Given create an email to case for the address "service.qafull@sixt.nl"
+2) And write the subject line as "Vehicle breakdown2"
+3) And write the same in the email body as well 
+4) And take a screenshot 
+5) And click on Change Owner to BNL_VIP group and Save
+6) And take a screenshot
+7) And in the App Launcher search for "Command Center for Service" and click
+8) And click on "Skill Backlog"
+9) And filter out and find the case id and verify the priority number should be 51 for High, 55 for Medium and 57 for Low and take the screenshot
+10) And Update the Case Priority to Medium and take the screenshot
+11) And click on "Skill Backlog"
+12) And filter out and find the case id and verify the priority number should be 51 for High, 55 for Medium and 57 for Low and take the screenshot
+13) Navigate back to the record page and update the Case Priority to High and take the screenshot
+14) And click on "Skill Backlog"
+15) And filter out and find the case id and verify the priority number should be 51 for High, 55 for Medium and 57 for Low and take the screenshot
+
+1) Given create an email to case for the address "service.qafull@sixt.it"
+2) And write the subject line as "Vehicle breakdown3"
+3) And write the same in the email body as well 
+4) And take a screenshot 
+5) And click on Change Owner to OF_VIP group and Save
+6) And take a screenshot
+7) And in the App Launcher search for "Command Center for Service" and click
+8) And click on "Skill Backlog"
+9) And filter out and find the case id and verify the priority number should be 51 for High, 55 for Medium and 57 for Low and take the screenshot
+10) And Update the Case Priority to Medium and take the screenshot
+11) And click on "Skill Backlog"
+12) And filter out and find the case id and verify the priority number should be 51 for High, 55 for Medium and 57 for Low and take the screenshot
+13) Navigate back to the record page and update the Case Priority to High and take the screenshot
+14) And click on "Skill Backlog"
+15) And filter out and find the case id and verify the priority number should be 51 for High, 55 for Medium and 57 for Low and take the screenshot
+
+1) Given create an email to case for the address "service.qafull@sixt.it"
+2) And write the subject line as "Vehicle breakdown3"
+3) And write the same in the email body as well 
+4) And take a screenshot 
+5) And click on Change Owner to IT_B2B group and Save
+6) And take a screenshot
+7) And in the App Launcher search for "Command Center for Service" and click
+8) And click on "Skill Backlog"
+9) And filter out and find the case id and verify the priority number should be 61 for High, 65 for Medium and 67 for Low and take the screenshot
+10) And Update the Case Priority to Medium and take the screenshot
+11) And click on "Skill Backlog"
+12) And filter out and find the case id and verify the priority number should be 61 for High, 65 for Medium and 67 for Low and take the screenshot
+13) Navigate back to the record page and update the Case Priority to High and take the screenshot
+14) And click on Change Owner to IT_T2 group and Save
+15) And take a screenshot
+16) And in the App Launcher search for "Command Center for Service" and click
+17) And click on "Skill Backlog"
+18) And filter out and find the case id and verify the priority number should be 101 for High, 105 for Medium and 107 for Low and take the screenshot
+19) And Update the Case Priority to Medium and take the screenshot
+20) And click on "Skill Backlog"
+21) And filter out and find the case id and verify the priority number should be 101 for High, 105 for Medium and 107 for Low and take the screenshot
+22) Navigate back to the record page and update the Case Priority to High and take the screenshot
+23) And click on "Skill Backlog"
+24) And filter out and find the case id and verify the priority number should be 101 for High, 105 for Medium and 107 for Low and take the screenshot
+25) Navigate back to the record page and update the Case Priority to Low and take the screenshot
+26) And click on "Skill Backlog"
+27) And filter out and find the case id and verify the priority number should be 101 for High, 105 for Medium and 107 for Low and take the screenshot
+And click on Change Owner to IT_T1 group and Save
+28) And take a screenshot
+29) And in the App Launcher search for "Command Center for Service" and click
+30) And click on "Skill Backlog"
+31) And filter out and find the case id and verify the priority number should be 131 for High, 135 for Medium and 137 for Low and take the screenshot
+32) And Update the Case Priority to Medium and take the screenshot
+33) And click on "Skill Backlog"
+34) And filter out and find the case id and verify the priority number should be 131 for High, 135 for Medium and 137 for Low and take the screenshot
+35) Navigate back to the record page and update the Case Priority to High and take the screenshot
+36) And click on "Skill Backlog"
+37) And filter out and find the case id and verify the priority number should be 131 for High, 135 for Medium and 137 for Low and take the screenshot
+
+1) Given create an email to case for the address "service.qafull@sixt.nl"
+2) And write the subject line as "Vehicle breakdown2"
+3) And write the same in the email body as well 
+4) And take a screenshot 
+5) And click on Change Owner to BNL_B2B group and Save
+6) And take a screenshot
+7) And in the App Launcher search for "Command Center for Service" and click
+8) And click on "Skill Backlog"
+9) And filter out and find the case id and verify the priority number should be 61 for High, 65 for Medium and 67 for Low and take the screenshot
+10) And Update the Case Priority to Medium and take the screenshot
+11) And click on "Skill Backlog"
+12) And filter out and find the case id and verify the priority number should be 61 for High, 65 for Medium and 67 for Low and take the screenshot
+13) Navigate back to the record page and update the Case Priority to High and take the screenshot
+14) And click on Change Owner to BNL_T2 group and Save
+15) And take a screenshot
+16) And in the App Launcher search for "Command Center for Service" and click
+17) And click on "Skill Backlog"
+18) And filter out and find the case id and verify the priority number should be 101 for High, 105 for Medium and 107 for Low and take the screenshot
+19) And Update the Case Priority to Medium and take the screenshot
+20) And click on "Skill Backlog"
+21) And filter out and find the case id and verify the priority number should be 101 for High, 105 for Medium and 107 for Low and take the screenshot
+22) Navigate back to the record page and update the Case Priority to High and take the screenshot
+23) And click on "Skill Backlog"
+24) And filter out and find the case id and verify the priority number should be 101 for High, 105 for Medium and 107 for Low and take the screenshot
+25) Navigate back to the record page and update the Case Priority to Low and take the screenshot
+26) And click on "Skill Backlog"
+27) And filter out and find the case id and verify the priority number should be 101 for High, 105 for Medium and 107 for Low and take the screenshot
+And click on Change Owner to BNL_T1 group and Save
+28) And take a screenshot
+29) And in the App Launcher search for "Command Center for Service" and click
+30) And click on "Skill Backlog"
+31) And filter out and find the case id and verify the priority number should be 131 for High, 135 for Medium and 137 for Low and take the screenshot
+32) And Update the Case Priority to Medium and take the screenshot
+33) And click on "Skill Backlog"
+34) And filter out and find the case id and verify the priority number should be 131 for High, 135 for Medium and 137 for Low and take the screenshot
+35) Navigate back to the record page and update the Case Priority to High and take the screenshot
+36) And click on "Skill Backlog"
+37) And filter out and find the case id and verify the priority number should be 131 for High, 135 for Medium and 137 for Low and take the screenshot
+
+1) Given create an email to case for the address "service.qafull@sixt.it"
+2) And write the subject line as "Vehicle breakdown3"
+3) And write the same in the email body as well 
+4) And take a screenshot 
+5) And click on Change Owner to OF_B2B group and Save
+6) And take a screenshot
+7) And in the App Launcher search for "Command Center for Service" and click
+8) And click on "Skill Backlog"
+9) And filter out and find the case id and verify the priority number should be 61 for High, 65 for Medium and 67 for Low and take the screenshot
+10) And Update the Case Priority to Medium and take the screenshot
+11) And click on "Skill Backlog"
+12) And filter out and find the case id and verify the priority number should be 61 for High, 65 for Medium and 67 for Low and take the screenshot
+13) Navigate back to the record page and update the Case Priority to High and take the screenshot
+14) And click on "Skill Backlog"
+15) And filter out and find the case id and verify the priority number should be 61 for High, 65 for Medium and 67 for Low and take the screenshot
+16) And click on Change Owner to OF_T2 group and Save
+17) And take a screenshot
+18) And in the App Launcher search for "Command Center for Service" and click
+19) And click on "Skill Backlog"
+20) And filter out and find the case id and verify the priority number should be 111 for High, 115 for Medium and 117 for Low and take the screenshot
+21) And Update the Case Priority to Medium and take the screenshot
+22) And click on "Skill Backlog"
+23) And filter out and find the case id and verify the priority number should be 111 for High, 115 for Medium and 117 for Low and take the screenshot
+24) Navigate back to the record page and update the Case Priority to High and take the screenshot
+25) And click on "Skill Backlog"
+26) And filter out and find the case id and verify the priority number should be 111 for High, 115 for Medium and 117 for Low and take the screenshot
+27) And click on Change Owner to OF_T1 group and Save
+28) And take a screenshot
+29) And in the App Launcher search for "Command Center for Service" and click
+30) And click on "Skill Backlog"
+31) And filter out and find the case id and verify the priority number should be 131 for High, 135 for Medium and 137 for Low and take the screenshot
+32) And Update the Case Priority to Medium and take the screenshot
+33) And click on "Skill Backlog"
+34) And filter out and find the case id and verify the priority number should be 131 for High, 135 for Medium and 137 for Low and take the screenshot
+35) Navigate back to the record page and update the Case Priority to High and take the screenshot
+36) And click on "Skill Backlog"
+37) And filter out and find the case id and verify the priority number should be 131 for High, 135 for Medium and 137 for Low and take the screenshot
+

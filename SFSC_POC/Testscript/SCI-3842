@@ -1,0 +1,74 @@
+Test Script: SCI-3842
+Story: As a Customer Service Agent, emails from pl-no-reply@yext.com for POS France should be routed to Tier 2 queue with skill T2_Standard
+Acceptance Criteria Reference: SCI-3475
+
+PRE-CONDITIONS:
+- Salesforce QAFull environment is accessible
+- POS France email-to-case address is active and configured
+- Tier 2 queue and T2_Standard skill routing rules are configured for POS France
+
+| Step | Test Step                                                                                                        | Test Result |
+|------|------------------------------------------------------------------------------------------------------------------|-------------|
+|      | **SCENARIO 1: Login and Navigate to SIXT-Service Cloud**                                                         |             |
+| 1    | Open the Salesforce QAFull login page at https://sixt--qafull.sandbox.lightning.force.com                         |             |
+| 2    | Enter the username in the "Username" field                                                                       |             |
+| 3    | Enter the password in the "Password" field                                                                       |             |
+| 4    | Click on the "Log In" button                                                                                     |             |
+| 5    | Verify the Salesforce Home page is displayed                                                                     |             |
+| 6    | Take a screenshot                                                                                                |             |
+|      | **SCENARIO 2: Navigate to SIXT-Service Cloud Application**                                                       |             |
+| 7    | Click on the App Launcher icon (9-dot grid icon) in the top-left corner                                          |             |
+| 8    | In the App Launcher search bar type "SIXT-Service Cloud"                                                         |             |
+| 9    | Wait for the search results to appear                                                                            |             |
+| 10   | Click on "SIXT-Service Cloud" application from the search results                                                |             |
+| 11   | Verify the SIXT-Service Cloud application is loaded                                                              |             |
+| 12   | Take a screenshot                                                                                                |             |
+|      | **SCENARIO 3: Create Email-to-Case for POS France**                                                              |             |
+| 13   | Open Gmail and compose a new email                                                                               |             |
+| 14   | In the "To" field enter the POS France email-to-case address "service.qafull@sixt.fr"                            |             |
+| 15   | Write the subject line as "Yext POS France Routing Test"                                                         |             |
+| 16   | Write the email body as "Yext POS France Routing Test - Verifying Tier 2 queue routing with T2_Standard skill"   |             |
+| 17   | Click the "Send" button to send the email                                                                        |             |
+| 18   | Take a screenshot of the sent email confirmation                                                                 |             |
+|      | **SCENARIO 4: Locate the Created Case in Salesforce**                                                            |             |
+| 19   | Navigate back to Salesforce QAFull                                                                               |             |
+| 20   | Wait 60 seconds for the email-to-case to be processed                                                            |             |
+| 21   | Click on the App Launcher icon (9-dot grid icon)                                                                 |             |
+| 22   | Search for "Cases" and click on it                                                                               |             |
+| 23   | In the Cases list view, search for the case with subject "Yext POS France Routing Test"                          |             |
+| 24   | Click on the case to open the case record                                                                        |             |
+| 25   | Verify the case is created with the correct subject "Yext POS France Routing Test"                               |             |
+| 26   | Note down the Case Number                                                                                        |             |
+| 27   | Take a screenshot                                                                                                |             |
+|      | **SCENARIO 5: Verify Case Owner is Tier 2 Queue**                                                                |             |
+| 28   | On the case record page verify the "Case Owner" field                                                            |             |
+| 29   | Confirm the Case Owner is assigned to the Tier 2 queue for POS France                                            |             |
+| 30   | Take a screenshot of the Case Owner field showing the Tier 2 queue assignment                                    |             |
+|      | **SCENARIO 6: Verify T2_Standard Skill in Skill Backlog**                                                        |             |
+| 31   | Click on the App Launcher icon (9-dot grid icon)                                                                 |             |
+| 32   | In the App Launcher search bar type "Command Center for Service"                                                 |             |
+| 33   | Click on "Command Center for Service" from the search results                                                    |             |
+| 34   | Verify the Command Center for Service page is loaded                                                             |             |
+| 35   | Take a screenshot                                                                                                |             |
+| 36   | Click on "Skill Backlog" tab                                                                                     |             |
+| 37   | Verify the Skill Backlog page is loaded                                                                          |             |
+| 38   | Take a screenshot                                                                                                |             |
+| 39   | Filter or search for the Case Number noted in Step 26                                                            |             |
+| 40   | Verify the case appears in the Skill Backlog                                                                     |             |
+| 41   | Verify the Skill assigned to the case is "T2_Standard"                                                           |             |
+| 42   | Verify the priority number is correct for the case                                                               |             |
+| 43   | Take a screenshot of the Skill Backlog showing the case with T2_Standard skill                                   |             |
+|      | **SCENARIO 7: Re-verify Skill After Wait Period**                                                                |             |
+| 44   | Wait 100 seconds for any background skill re-evaluation                                                          |             |
+| 45   | Navigate back to "Command Center for Service" via App Launcher                                                   |             |
+| 46   | Click on "Skill Backlog"                                                                                         |             |
+| 47   | Filter or search for the Case Number                                                                             |             |
+| 48   | Verify the skill is still "T2_Standard" and the queue is still Tier 2                                            |             |
+| 49   | Take a screenshot of the final Skill Backlog state                                                               |             |
+
+EXPECTED RESULTS:
+- Case is created successfully via email-to-case for POS France
+- Case Owner is automatically assigned to the Tier 2 queue
+- Skill Backlog shows the case with skill "T2_Standard"
+- After the wait period, the skill assignment remains "T2_Standard"
+- All screenshots are captured as evidence at each verification step

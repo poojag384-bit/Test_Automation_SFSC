@@ -1,0 +1,9 @@
+1)Given an email is sent to "roadside-ch@sixt.com"
+2)Then a case must be created via email-to-case with the From address in the email composer 
+set as roadside-at@sixt.com where the Subject and Body is "Roadside tire issue.Please send help"
+3) Verify if the Case classification contains Case Reason, Case sub-reason and Case subsub reason
+4) If it is blank even after 2mins Case Owner must be "DACH_RSA_During_Support"
+5) Verify that the Case priority must be High
+6) Verify the default language has to be "German"
+7) Verify the default POS has to be "Switzerland"
+8) Go to the "Feed" and click on "Write an Email" to check the email signature

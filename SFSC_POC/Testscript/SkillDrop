@@ -3,6 +3,6 @@ And write the subject line as "Poor service from the team"
 And write the same in the email body as well , take a screenshot 
 And Verify the Case Owner name and take a screenshot
 And in the App Launcher search for "Command Center for Service" and click
-And click on "Skill Backlog"
+And click on "Skill Backlog" , and take the screenshot
 And filter out and find the case id and verify the priority number and take the screenshot
 
