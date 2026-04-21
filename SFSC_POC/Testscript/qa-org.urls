@@ -1,0 +1,6 @@
+# QA Org — public URLs only (no secrets)
+# Cursor rule: .cursor/rules/qa-org.mdc
+QA_ORG_NAME=QA Org
+QA_LIGHTNING_BASE=https://sixt3--qa.sandbox.lightning.force.com
+QA_CASES_ALL_OPEN=https://sixt3--qa.sandbox.lightning.force.com/lightning/o/Case/list?filterName=AllOpenCases
+SF_CLI_ALIAS=qa-org

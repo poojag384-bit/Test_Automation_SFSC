@@ -1,0 +1,68 @@
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.prestage@sixt.it"
+Subject : Met with an accident 
+Email Body : Hi,
+I met with an accident down the street.
+Thank you.  
+3) Navigate to Case Record detail page
+4) Click on "Change Owner" and update it to "IT_VIP" and take screenshot
+5) Update the Case Priority to Medium
+6) And in the App Launcher search for "Command Center for Service" and click
+7) And click on "Skill Backlog"
+8) And filter out and find the case id and verify the priority number should be 51 for High, 55 for Medium and 57 for Low and take the screenshot
+9) And Update the Case Priority to Low and take the screenshot
+10) And click on "Skill Backlog"
+11) And filter out and find the case id and verify the priority number should be 51 for High, 55 for Medium and 57 for Low and take the screenshot
+12) Navigate back to the record page and update the Case Priority to High and take the screenshot
+13) And click on "Skill Backlog"
+14) And filter out and find the case id and verify the priority number should be 51 for High, 55 for Medium and 57 for Low and take the screenshot
+15) Provide the screenshots of all the execution made above in a single word document and save as "IT_VIP"
+16) For the same above record change the owner to "BNL_VIP" and take screenshot 
+17) Update the Case Priority to Medium
+18) And in the App Launcher search for "Command Center for Service" and click
+19) And click on "Skill Backlog"
+20) And filter out and find the case id and verify the priority number should be 51 for High, 55 for Medium and 57 for Low and take the screenshot
+21) And Update the Case Priority to Low and take the screenshot
+22) And click on "Skill Backlog"
+23) And filter out and find the case id and verify the priority number should be 51 for High, 55 for Medium and 57 for Low and take the screenshot
+24) Navigate back to the record page and update the Case Priority to High and take the screenshot
+25) And click on "Skill Backlog"
+26) And filter out and find the case id and verify the priority number should be 51 for High, 55 for Medium and 57 for Low and take the screenshot
+27) Provide the screenshots of all the execution from step 16 made above in a single word document and save as "BNL_VIP"
+28) For the same above record change the owner to "Overflow_VIP" and take screenshot 
+29) Update the Case Priority to Medium
+30) And in the App Launcher search for "Command Center for Service" and click
+31) And click on "Skill Backlog"
+32) And filter out and find the case id and verify the priority number should be 51 for High, 55 for Medium and 57 for Low and take the screenshot
+33) And Update the Case Priority to Low and take the screenshot
+34) And click on "Skill Backlog"
+35) And filter out and find the case id and verify the priority number should be 51 for High, 55 for Medium and 57 for Low and take the screenshot
+36) Navigate back to the record page and update the Case Priority to High and take the screenshot
+37) And click on "Skill Backlog"
+38) And filter out and find the case id and verify the priority number should be 51 for High, 55 for Medium and 57 for Low and take the screenshot
+39) Provide the screenshots of all the execution from step 16 made above in a single word document and save as "Overflow_VIP"
+40) For the same above record change the owner to "FR_T3_During_Rental_Loyalty" and take screenshot 
+41) Update the Case Priority to Medium
+42) And in the App Launcher search for "Command Center for Service" and click
+43) And click on "Skill Backlog"
+44) And filter out and find the case id and verify the priority number should be 51 for High, 55 for Medium and 57 for Low and take the screenshot
+45) And Update the Case Priority to Low and take the screenshot
+46) And click on "Skill Backlog"
+47) And filter out and find the case id and verify the priority number should be 51 for High, 55 for Medium and 57 for Low and take the screenshot
+48) Navigate back to the record page and update the Case Priority to High and take the screenshot
+49) And click on "Skill Backlog"
+50) And filter out and find the case id and verify the priority number should be 51 for High, 55 for Medium and 57 for Low and take the screenshot
+51) Provide the screenshots of all the execution from step 16 made above in a single word document and save as "FR_T3_During_Rental_Loyalty"
+52) For the same above record change the owner to "US_T3_After_Rental_Loyalty" and take screenshot 
+53) Update the Case Priority to Medium
+54) And in the App Launcher search for "Command Center for Service" and click
+55) And click on "Skill Backlog"
+56) And filter out and find the case id and verify the priority number should be 51 for High, 55 for Medium and 57 for Low and take the screenshot
+57) And Update the Case Priority to Low and take the screenshot
+58) And click on "Skill Backlog"
+59) And filter out and find the case id and verify the priority number should be 51 for High, 55 for Medium and 57 for Low and take the screenshot
+60) Navigate back to the record page and update the Case Priority to High and take the screenshot
+61) And click on "Skill Backlog"
+62) And filter out and find the case id and verify the priority number should be 51 for High, 55 for Medium and 57 for Low and take the screenshot
+63) Provide the screenshots of all the execution from step 16 made above in a single word document and save as "US_T3_After_Rental_Loyalty"

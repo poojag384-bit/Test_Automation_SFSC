@@ -1,0 +1,317 @@
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.qafull@sixt.it"
+Subject : Met with an accident 
+Email Body : Hi,
+I met with an accident down the street.
+Thank you.  
+3) Navigate to Case Record detail page
+4) Verify that the Case Owner Name field should be "IT_RSA_During_Support" and take screenshot
+5) Update the Case Priority to Medium
+6) And in the App Launcher search for "Command Center for Service" and click
+7) And click on "Skill Backlog"
+8) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+9) And Update the Case Priority to Low and take the screenshot
+10) And click on "Skill Backlog"
+11) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+12) Navigate back to the record page and update the Case Priority to High and take the screenshot
+13) And click on "Skill Backlog"
+14) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+15) Provide the screenshots of all the execution made above in a single word document and save as "IT_RSA_During_Support"
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.qafull@sixt.it"
+Subject : Unsatisfied service during breakdown 
+Email Body : Hi,
+Unsatisfied service during breakdown.
+Thank you.  
+3) Navigate to Case Record detail page
+4) Verify that the Case Owner Name field should be "IT_RSA_After_Claims" and take screenshot
+5) Update the Case Priority to Medium
+6) And in the App Launcher search for "Command Center for Service" and click
+7) And click on "Skill Backlog"
+8) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+9) And Update the Case Priority to Low and take the screenshot
+10) And click on "Skill Backlog"
+11) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+12) Navigate back to the record page and update the Case Priority to High and take the screenshot
+13) And click on "Skill Backlog"
+14) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+15) Provide the screenshots of all the execution made above in a single word document and save as "IT_RSA_After_Claims"
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.qafull@sixt.fr"
+Subject : Met with an accident 
+Email Body : Hi,
+I met with an accident down the street.
+Thank you.  
+3) Navigate to Case Record detail page
+4) Verify that the Case Owner Name field should be "FR_RSA_During_Support" and take screenshot
+5) Update the Case Priority to Medium
+6) And in the App Launcher search for "Command Center for Service" and click
+7) And click on "Skill Backlog"
+8) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+9) And Update the Case Priority to Low and take the screenshot
+10) And click on "Skill Backlog"
+11) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+12) Navigate back to the record page and update the Case Priority to High and take the screenshot
+13) And click on "Skill Backlog"
+14) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+15) Provide the screenshots of all the execution made above in a single word document and save as "FR_RSA_During_Support"
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.qafull@sixt.fr"
+Subject : Unsatisfied service during breakdown 
+Email Body : Hi,
+Unsatisfied service during breakdown.
+Thank you.  
+3) Navigate to Case Record detail page
+4) Verify that the Case Owner Name field should be "FR_RSA_After_Claims" and take screenshot
+5) Update the Case Priority to Medium
+6) And in the App Launcher search for "Command Center for Service" and click
+7) And click on "Skill Backlog"
+8) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+9) And Update the Case Priority to Low and take the screenshot
+10) And click on "Skill Backlog"
+11) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+12) Navigate back to the record page and update the Case Priority to High and take the screenshot
+13) And click on "Skill Backlog"
+14) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+15) Provide the screenshots of all the execution made above in a single word document and save as "FR_RSA_After_Claims"
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.qafull@sixt.nl"
+Subject : Met with an accident 
+Email Body : Hi,
+I met with an accident down the street.
+Thank you.  
+3) Navigate to Case Record detail page
+4) Verify that the Case Owner Name field should be "BNL_RSA_During_Support" and take screenshot
+5) Update the Case Priority to Medium
+6) And in the App Launcher search for "Command Center for Service" and click
+7) And click on "Skill Backlog"
+8) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+9) And Update the Case Priority to Low and take the screenshot
+10) And click on "Skill Backlog"
+11) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+12) Navigate back to the record page and update the Case Priority to High and take the screenshot
+13) And click on "Skill Backlog"
+14) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+15) Provide the screenshots of all the execution made above in a single word document and save as "BNL_RSA_During_Support"
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.qafull@sixt.be"
+Subject : Met with an accident 
+Email Body : Hi,
+I met with an accident down the street.
+Thank you.  
+3) Navigate to Case Record detail page
+4) Verify that the Case Owner Name field should be "BNL_RSA_After_Claims" and take screenshot
+5) Update the Case Priority to Medium
+6) And in the App Launcher search for "Command Center for Service" and click
+7) And click on "Skill Backlog"
+8) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+9) And Update the Case Priority to Low and take the screenshot
+10) And click on "Skill Backlog"
+11) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+12) Navigate back to the record page and update the Case Priority to High and take the screenshot
+13) And click on "Skill Backlog"
+14) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+15) Provide the screenshots of all the execution made above in a single word document and save as "BNL_RSA_After_Claims"
+
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.qafull@sixt.co.uk"
+Subject : Met with an accident 
+Email Body : Hi,
+I met with an accident down the street.
+Thank you.  
+3) Navigate to Case Record detail page
+4) Verify that the Case Owner Name field should be "UK_RSA_During_Support" and take screenshot
+5) Update the Case Priority to Medium
+6) And in the App Launcher search for "Command Center for Service" and click
+7) And click on "Skill Backlog"
+8) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+9) And Update the Case Priority to Low and take the screenshot
+10) And click on "Skill Backlog"
+11) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+12) Navigate back to the record page and update the Case Priority to High and take the screenshot
+13) And click on "Skill Backlog"
+14) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+15) Provide the screenshots of all the execution made above in a single word document and save as "UK_RSA_During_Support"
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.qafull@sixt.co.uk"
+Subject : Unsatisfied service during breakdown 
+Email Body : Hi,
+Unsatisfied service during breakdown.
+Thank you.  
+3) Navigate to Case Record detail page
+4) Verify that the Case Owner Name field should be "UK_RSA_After_Claims" and take screenshot
+5) Update the Case Priority to Medium
+6) And in the App Launcher search for "Command Center for Service" and click
+7) And click on "Skill Backlog"
+8) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+9) And Update the Case Priority to Low and take the screenshot
+10) And click on "Skill Backlog"
+11) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+12) Navigate back to the record page and update the Case Priority to High and take the screenshot
+13) And click on "Skill Backlog"
+14) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+15) Provide the screenshots of all the execution made above in a single word document and save as "UK_RSA_After_Claims"
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.qafull@sixt.de"
+Subject : Met with an accident 
+Email Body : Hi,
+I met with an accident down the street.
+Thank you.  
+3) Navigate to Case Record detail page
+4) Verify that the Case Owner Name field should be "DACH_RSA_During_Support" and take screenshot
+5) Update the Case Priority to Medium
+6) And in the App Launcher search for "Command Center for Service" and click
+7) And click on "Skill Backlog"
+8) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+9) And Update the Case Priority to Low and take the screenshot
+10) And click on "Skill Backlog"
+11) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+12) Navigate back to the record page and update the Case Priority to High and take the screenshot
+13) And click on "Skill Backlog"
+14) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+15) Provide the screenshots of all the execution made above in a single word document and save as "DACH_RSA_During_Support"
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.qafull@sixt.de"
+Subject : Refund of additional costs caused by breakdown 
+Email Body : Hi,
+Refund of additional costs caused by breakdown.
+Thank you.  
+3) Navigate to Case Record detail page
+4) Verify that the Case Owner Name field should be "DACH_RSA_After_Claims" and take screenshot
+5) Update the Case Priority to Medium
+6) And in the App Launcher search for "Command Center for Service" and click
+7) And click on "Skill Backlog"
+8) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+9) And Update the Case Priority to Low and take the screenshot
+10) And click on "Skill Backlog"
+11) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+12) Navigate back to the record page and update the Case Priority to High and take the screenshot
+13) And click on "Skill Backlog"
+14) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+15) Provide the screenshots of all the execution made above in a single word document and save as "DACH_RSA_After_Claims"
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.qafull@sixt.de"
+Subject : Refund of additional costs caused by breakdown 
+Email Body : Hi,
+Refund of additional costs caused by breakdown.
+Thank you.  
+3) Navigate to Case Record detail page
+4) Verify that the Case Owner Name field should be "DACH_RSA_After_Claims" and take screenshot
+5) Update the Owner to "DACH_RSA_InternalComms" by clicking on Change Owner
+5) Update the Case Priority to Medium
+6) And in the App Launcher search for "Command Center for Service" and click
+7) And click on "Skill Backlog"
+8) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+9) And Update the Case Priority to Low and take the screenshot
+10) And click on "Skill Backlog"
+11) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+12) Navigate back to the record page and update the Case Priority to High and take the screenshot
+13) And click on "Skill Backlog"
+14) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+15) Provide the screenshots of all the execution made above in a single word document and save as "DACH_RSA_InternalComms"
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.qafull@sixt.es"
+Subject : Refund of additional costs caused by breakdown 
+Email Body : Hi,
+Refund of additional costs caused by breakdown.
+Thank you.  
+3) Navigate to Case Record detail page
+4) Verify that the Case Owner Name field should be "ES_RSA_After_Claims" and take screenshot
+5) Update the Owner to "DACH_RSA_InternalComms" by clicking on Change Owner
+5) Update the Case Priority to Medium
+6) And in the App Launcher search for "Command Center for Service" and click
+7) And click on "Skill Backlog"
+8) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+9) And Update the Case Priority to Low and take the screenshot
+10) And click on "Skill Backlog"
+11) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+12) Navigate back to the record page and update the Case Priority to High and take the screenshot
+13) And click on "Skill Backlog"
+14) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+15) Provide the screenshots of all the execution made above in a single word document and save as "ES_RSA_InternalComms"
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.qafull@sixt.es"
+Subject : Met with an accident 
+Email Body : Hi,
+I met with an accident down the street.
+Thank you.  
+3) Navigate to Case Record detail page
+4) Verify that the Case Owner Name field should be "ES_RSA_During_Support" and take screenshot
+5) Update the Case Priority to Medium
+6) And in the App Launcher search for "Command Center for Service" and click
+7) And click on "Skill Backlog"
+8) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+9) And Update the Case Priority to Low and take the screenshot
+10) And click on "Skill Backlog"
+11) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+12) Navigate back to the record page and update the Case Priority to High and take the screenshot
+13) And click on "Skill Backlog"
+14) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+15) Provide the screenshots of all the execution made above in a single word document and save as "ES_RSA_During_Support"
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.qafull@sixt.com"
+Subject : Unsatisfied service during breakdown 
+Email Body : Hi,
+Unsatisfied service during breakdown.
+Thank you.  
+3) Navigate to Case Record detail page
+4) Verify that the Case Owner Name field should be "US_RSA_After_Claims" and take screenshot
+5) Update the Case Priority to Medium
+6) And in the App Launcher search for "Command Center for Service" and click
+7) And click on "Skill Backlog"
+8) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+9) And Update the Case Priority to Low and take the screenshot
+10) And click on "Skill Backlog"
+11) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+12) Navigate back to the record page and update the Case Priority to High and take the screenshot
+13) And click on "Skill Backlog"
+14) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+15) Provide the screenshots of all the execution made above in a single word document and save as "US_RSA_After_Claims"
+
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.qafull@sixt.com"
+Subject : Tire Damage 
+Email Body : Hi,
+I have a damage in my tire pls help.
+Thank you.  
+3) Navigate to Case Record detail page
+4) Verify that the Case Owner Name field should be "US_RSA_During_Support" and take screenshot
+5) Update the Case Priority to Medium
+6) And in the App Launcher search for "Command Center for Service" and click
+7) And click on "Skill Backlog"
+8) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+9) And Update the Case Priority to Low and take the screenshot
+10) And click on "Skill Backlog"
+11) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+12) Navigate back to the record page and update the Case Priority to High and take the screenshot
+13) And click on "Skill Backlog"
+14) And filter out and find the case id and verify the priority number should be 71 for High, 75 for Medium and 77 for Low and take the screenshot
+15) Provide the screenshots of all the execution made above in a single word document and save as "US_RSA_During_Support"
