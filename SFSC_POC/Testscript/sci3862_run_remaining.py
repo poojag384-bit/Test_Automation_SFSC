@@ -9,9 +9,13 @@ Prereqs:
 
 Usage:
   python3 sci3862_run_remaining.py
+  python3 sci3862_run_remaining.py --login-grace 300
 
 A browser window opens. Log into Salesforce QA if prompted, then return to the
 terminal and press Enter so the script can continue from the case page.
+
+With --login-grace SEC, the script waits SEC seconds instead of Enter (use when
+piping stdin is not available or you need more time to complete SSO).
 
 Adjust QUEUE_SKILLS if a backlog row does not appear (pick skills that match
 the queue in Command Center > Skills filter list).
@@ -69,7 +73,21 @@ def _shot(page, name: str) -> Path:
 
 
 def change_case_owner(page, queue_name: str) -> None:
-    page.get_by_role("button", name="Change Owner").click()
+    url = page.url or ""
+    if "login" in url.lower() or "secur/frontdoor" in url.lower():
+        _shot(page, "sci3862_debug_still_on_login")
+        raise RuntimeError(
+            "Playwright is still on a Salesforce login page. Log in to QA in the opened "
+            "Chromium window, confirm case 15856096 loads, then re-run."
+        )
+
+    # Lightning exposes Change Owner as button, link, or LWC; try in order.
+    change_owner = (
+        page.get_by_role("button", name=re.compile(r"change\s*owner", re.I))
+        .or_(page.get_by_role("link", name=re.compile(r"change\s*owner", re.I)))
+        .or_(page.get_by_text("Change Owner", exact=True))
+    )
+    change_owner.first.click(timeout=90000)
     page.wait_for_timeout(2000)
     combo = page.get_by_role("combobox", name="Select Owner")
     combo.click()
@@ -173,6 +191,13 @@ def main() -> None:
         action="store_true",
         help="Skip 'press Enter' (waits 8s for you to focus the browser / log in)",
     )
+    ap.add_argument(
+        "--login-grace",
+        type=int,
+        metavar="SEC",
+        default=None,
+        help="Wait SEC seconds after opening the case URL before automation (instead of Enter)",
+    )
     ap.add_argument("--headless", action="store_true", help="Run without browser UI")
     args = ap.parse_args()
 
@@ -183,7 +208,13 @@ def main() -> None:
         context = browser.new_context(viewport={"width": 1440, "height": 900})
         page = context.new_page()
         page.goto(CASE_URL, wait_until="domcontentloaded", timeout=120000)
-        if args.auto:
+        if args.login_grace is not None:
+            print(
+                f"Waiting {args.login_grace}s — log into Salesforce QA in the browser, "
+                "then leave the case page open."
+            )
+            time.sleep(args.login_grace)
+        elif args.auto:
             print("Auto mode: continuing in 8 seconds…")
             time.sleep(8)
         else:

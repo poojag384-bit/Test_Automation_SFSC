@@ -1,0 +1,13 @@
+1) Login to Gmail
+2) Create a Email-to-case scenario where the 
+To address is "service.prestage@sixt.fr"
+Subject : Problème d'application 
+Email Body : Bonjour,
+Problème avec l'application.
+Merci, Pooja
+3) Navigate to Case Record detail page
+4) Verify if the Case classification is Case Type = '1 Customer Account' and Case reason = 1.4 Customer Relations'
+5) If not above Case Type then update both of them 
+6) Verify that the Case Owner is now 'T2_Standard'
+7) Update the Case sub reason ='1.4.1 SIXT Voucher' and save
+8) Verify that the Case Owner is now 'T1_After_Rental'
